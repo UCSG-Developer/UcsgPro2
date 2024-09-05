@@ -11,14 +11,16 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color("BackGround").ignoresSafeArea()
-            VStack {
-                
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world of Git!")
+            ZStack {
+                Color("BackgroundApp")
+                VStack {
+                    Image(systemName: "globe")
+                        .imageScale(.large)
+                        .foregroundStyle(.tint)
+                    Text("Hello, world of Git!")
+                }
+                .padding()
             }
-            .padding()
         }
         
     }
