@@ -15,6 +15,7 @@
 		3C0876252C8A0D2000956C58 /* UcsgProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0876242C8A0D2000956C58 /* UcsgProUITests.swift */; };
 		3C0876272C8A0D2000956C58 /* UcsgProUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0876262C8A0D2000956C58 /* UcsgProUITestsLaunchTests.swift */; };
 		3C0876342C8B4D6E00956C58 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0876332C8B4D6E00956C58 /* SecondView.swift */; };
+		3CB2146D2C8BAE9A002E1D27 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2146C2C8BAE9A002E1D27 /* ThirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		3C0876242C8A0D2000956C58 /* UcsgProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UcsgProUITests.swift; sourceTree = "<group>"; };
 		3C0876262C8A0D2000956C58 /* UcsgProUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UcsgProUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3C0876332C8B4D6E00956C58 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		3CB2146C2C8BAE9A002E1D27 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				3C08760D2C8A0D2000956C58 /* Assets.xcassets */,
 				3C08760F2C8A0D2000956C58 /* Preview Content */,
 				3C0876332C8B4D6E00956C58 /* SecondView.swift */,
+				3CB2146C2C8BAE9A002E1D27 /* ThirdView.swift */,
 			);
 			path = UcsgPro;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB2146D2C8BAE9A002E1D27 /* ThirdView.swift in Sources */,
 				3C0876342C8B4D6E00956C58 /* SecondView.swift in Sources */,
 				3C08760C2C8A0D1E00956C58 /* ContentView.swift in Sources */,
 				3C08760A2C8A0D1E00956C58 /* UcsgProApp.swift in Sources */,

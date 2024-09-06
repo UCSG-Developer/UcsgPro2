@@ -17,10 +17,10 @@ struct ContentView: View {
                     Image("logo_ucsg")
                     Text("Hello, World of GitHUB!")
                     Text("Trying to keep versions well")
-                    
+                    Image("logo_estudiantes")
                 }
                 .padding()
-            }
+            }.cornerRadius(40)
         }
     }
 }
