@@ -14,11 +14,10 @@ struct ContentView: View {
             ZStack {
                 Color("BackgroundApp")
                 VStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
+                    Image("logo_ucsg")
                     Text("Hello, World of GitHUB!")
                     Text("Trying to keep versions well")
+                    
                 }
                 .padding()
             }
