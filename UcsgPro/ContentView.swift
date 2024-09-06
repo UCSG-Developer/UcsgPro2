@@ -18,6 +18,7 @@ struct ContentView: View {
                         .imageScale(.large)
                         .foregroundStyle(.tint)
                     Text("Hello, World of GitHUB!")
+                    Text("Trying to keep versions well")
                 }
                 .padding()
             }
