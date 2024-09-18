@@ -9,7 +9,15 @@ import SwiftUI
 
 struct BibliotecasView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color("BackGround").ignoresSafeArea()
+            ZStack {
+                Color("BackgroundApp")
+                VStack {
+                    
+                }
+            }.clipShape(UnevenRoundedRectangle(topLeadingRadius: 20, topTrailingRadius: 20))
+        }
     }
 }
 
