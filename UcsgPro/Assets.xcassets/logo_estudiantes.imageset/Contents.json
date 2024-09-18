@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "logo_estudiantes_b_2x.png",
+      "filename" : "logo_estudiantes_dark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,6 @@
           "value" : "dark"
         }
       ],
-      "filename" : "logo_estudiantes_dark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
