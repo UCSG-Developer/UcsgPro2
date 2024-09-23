@@ -11,9 +11,9 @@ struct ContentView: View {
     @State var userLoged = false
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             Color("BackGround").edgesIgnoringSafeArea(.top)
-            ZStack {
+            ZStack  {
                 NavigationStack {
                     Color("BackgroundApp")
                     VStack {

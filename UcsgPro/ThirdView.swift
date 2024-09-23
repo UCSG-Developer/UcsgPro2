@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct ThirdView: View {
     var body: some View {
@@ -14,27 +15,43 @@ struct ThirdView: View {
             ZStack(alignment: .top) {
                 Color("BackgroundApp")
                 VStack {
-                    HStack {
-                        VStack (alignment: .leading) {
-                            Text("Eduardo Gomez").bold()
-                                .font(.title2)
-                                .foregroundColor(Color.white)
-                                .multilineTextAlignment(.leading)
+                    ZStack(alignment: .leading) {
+                        Image("watermark_ucsg")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 100, alignment: .leading)
+                        HStack {
+                            VStack (alignment: .leading) {
+                                Text("Eduardo Gomez").bold()
+                                    .font(.title2)
+                                    .padding(.top, 20)
+                                    .foregroundColor(Color.white)
+                                    .multilineTextAlignment(.leading)
                                 
-                            Text("COMPUTACIÓN (R)")
-                                .font(.system(size: 13))
-                                .foregroundColor(Color.white)
-                                .lineLimit(1)
-                            Text("FACULTAD DE INGENIERÍA")
-                                .font(.system(size: 10, weight: .bold))
-                                .foregroundColor(Color.white)
-                                .lineLimit(1)
-                        }.padding(.leading, 20).padding(.bottom, 20)
-                        Spacer()
+                                Text("COMPUTACIÓN (R)")
+                                    .font(.system(size: 13))
+                                    .foregroundColor(Color.white)
+                                    .lineLimit(1)
+                                Text("FACULTAD DE INGENIERÍA")
+                                    .font(.system(size: 10, weight: .bold))
+                                    .foregroundColor(Color.white)
+                                    .lineLimit(1)
+                            }.padding(.leading, 20).padding(.bottom, 20)
+                            Spacer()
+                            Image("eduardo.gomez")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 70)
+                                .foregroundColor(.white)
+                                .clipShape(Circle())
+                        }.padding(.trailing, 10)
+                            
                     }.background(Color("BackGround"))
+                        .frame(alignment: .leading)
                         .clipShape(UnevenRoundedRectangle(bottomLeadingRadius: 20, bottomTrailingRadius: 20))
                     ScrollView {
                         VStack (alignment: .leading) {
+                            
                             ScrollView(.horizontal) {
                                 LazyHStack(spacing: 0) {
                                     VStack (spacing: 0) {
@@ -160,7 +177,7 @@ struct ThirdView: View {
                             }
                             .scrollTargetBehavior(.viewAligned)
                             
-                            Text("MATERIAS")
+                            Text("MIS MATERIAS")
                                 .font(.body).bold()
                                 .padding(.top, 10)
                                 .padding(.leading, 20)
@@ -310,12 +327,56 @@ struct ThirdView: View {
                                 LazyHStack(spacing: 10) {
                                     Link(destination: URL(string: "https://www34.ucsg.edu.ec")!) {
                                         VStack (alignment: .center, spacing: 0) {
-                                            Image(systemName: "macbook.and.ipad")
+                                            Image(systemName: "arrow.down.document")
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
                                                 .frame(height: 30)
                                                 .foregroundColor(.white)
-                                            Text("Facturación electrónica")
+                                            Text("Descargar Trámites")
+                                                .font(.caption2).bold()
+                                                .foregroundColor(.white)
+                                                .multilineTextAlignment(.center)
+                                            
+                                        }.frame(height: 85)
+                                            .frame(width: 85, alignment: .top)
+                                            .frame(alignment: .top)
+                                            .background(Color("BackGround2"))
+                                            .clipShape(RoundedRectangle(cornerRadius: 16))
+                                            .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
+                                                effect
+                                                    .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
+                                            }
+                                    }
+                                    NavigationLink(destination: BibliotecasView()) {
+                                        VStack (alignment: .center, spacing: 0) {
+                                            Image(systemName: "headset.circle")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(height: 30)
+                                                .foregroundColor(.white)
+                                            Text("Consulta Mesa de Ayuda")
+                                                .font(.caption2).bold()
+                                                .foregroundColor(.white)
+                                                .multilineTextAlignment(.center)
+                                            
+                                        }.frame(height: 85)
+                                            .frame(width: 85, alignment: .top)
+                                            .frame(alignment: .top)
+                                            .background(Color("BackGround2"))
+                                            .clipShape(RoundedRectangle(cornerRadius: 16))
+                                            .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
+                                                effect
+                                                    .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
+                                            }
+                                    }
+                                    NavigationLink(destination: ContentView()) {
+                                        VStack (alignment: .center, spacing: 0) {
+                                            Image(systemName: "calendar")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(height: 30)
+                                                .foregroundColor(.white)
+                                            Text("Horario")
                                                 .font(.caption2).bold()
                                                 .foregroundColor(.white)
                                                 .multilineTextAlignment(.center)
@@ -353,27 +414,6 @@ struct ThirdView: View {
                                             }
                                     }
                                     VStack (alignment: .center, spacing: 0) {
-                                        Image(systemName: "calendar")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(height: 30)
-                                            .foregroundColor(.white)
-                                        Text("Horario")
-                                            .font(.caption2).bold()
-                                            .foregroundColor(.white)
-                                            .multilineTextAlignment(.center)
-                                        
-                                    }.frame(height: 85)
-                                        .frame(width: 85, alignment: .top)
-                                        .frame(alignment: .top)
-                                        .background(Color("BackGround2"))
-                                        .clipShape(RoundedRectangle(cornerRadius: 16))
-                                        .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
-                                            effect
-                                                .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
-                                        }
-                                    
-                                    VStack (alignment: .center, spacing: 0) {
                                         Image(systemName: "desktopcomputer.and.arrow.down")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
@@ -396,11 +436,55 @@ struct ThirdView: View {
                                         .onTapGesture {
                                           print("The whole VStack is tappable now!")
                                         }
+
                                 }
                                 .padding(.horizontal, 10)
                                 .padding(.top, 10)
                                 .scrollTargetLayout()
-                                
+                            }
+                            .scrollTargetBehavior(.viewAligned)
+                            
+                            Text("NOTICIAS / EVENTOS")
+                                .font(.body).bold()
+                                .padding(.top, 10)
+                                .padding(.leading, 20)
+                            
+                            ScrollView(.horizontal) {
+                                LazyHStack(spacing: 0) {
+                                    VStack (spacing: 0) {
+                                        Image("gastos-deducibles")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(height: 170)
+                                    }.frame(height: 180)
+                                        .frame(alignment: .top)
+                                        .frame(width: .screenWidth - 40)
+                                        
+                                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                                        .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
+                                            effect
+                                                .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
+                                        }
+                                    
+                                    VStack (spacing: 0) {
+                                        Image("beneficios-tarjeta")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(height: 170)
+                                    }.frame(height: 180)
+                                        .frame(alignment: .top)
+                                        .frame(width: .screenWidth - 40)
+                                        
+                                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                                        .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
+                                            effect
+                                                .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
+                                        }
+                                    
+                                }
+                                .padding(.horizontal, 10)
+                                .padding(.top, 10)
+                                .scrollTargetLayout()
                             }
                             .scrollTargetBehavior(.viewAligned)
                             .padding(.bottom, 20)
@@ -424,4 +508,47 @@ extension CGFloat {
 
 #Preview {
     ThirdView()
+}
+
+struct WebView: UIViewRepresentable {
+    
+    let webView: WKWebView
+    
+    init() {
+        webView = WKWebView(frame: .zero)
+        
+        webView.configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
+        webView.configuration.defaultWebpagePreferences.allowsContentJavaScript = true
+    }
+    
+    func makeUIView(context: Context) -> WKWebView {
+        return webView
+    }
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        let urlNoticias = "https://www46.ucsg.edu.ec"
+        webView.load(URLRequest(url: URL(string: urlNoticias)!))
+    }
+    
+    func webView(webView: WKWebView!, createWebViewWithConfiguration configuration: WKWebViewConfiguration!, forNavigationAction navigationAction: WKNavigationAction!, windowFeatures: WKWindowFeatures!) -> WKWebView! {
+        if navigationAction.targetFrame == nil {
+            webView.load(navigationAction.request)
+        }
+        return nil
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, preferences: WKWebpagePreferences, decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void) {
+        if navigationAction.shouldPerformDownload {
+            decisionHandler(.download, preferences)
+        } else {
+            decisionHandler(.allow, preferences)
+        }
+    }
+
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        if navigationResponse.canShowMIMEType {
+            decisionHandler(.allow)
+        } else {
+            decisionHandler(.download)
+        }
+    }
 }

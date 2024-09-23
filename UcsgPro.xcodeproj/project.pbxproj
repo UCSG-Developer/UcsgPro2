@@ -17,6 +17,7 @@
 		3C0876342C8B4D6E00956C58 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0876332C8B4D6E00956C58 /* SecondView.swift */; };
 		3C11C7992C94C1B500CB54C9 /* BibliotecasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C7982C94C1B500CB54C9 /* BibliotecasView.swift */; };
 		3C11C79B2C94F5D100CB54C9 /* MateriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11C79A2C94F5D100CB54C9 /* MateriaView.swift */; };
+		3C4855352C9DF27D007DEC97 /* SecondMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4855342C9DF27D007DEC97 /* SecondMenuView.swift */; };
 		3CB2146D2C8BAE9A002E1D27 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2146C2C8BAE9A002E1D27 /* ThirdView.swift */; };
 		3CB214702C8F8062002E1D27 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2146F2C8F8062002E1D27 /* InputView.swift */; };
 		3CB214722C90A33A002E1D27 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB214712C90A339002E1D27 /* SplashScreenView.swift */; };
@@ -54,6 +55,7 @@
 		3C0876332C8B4D6E00956C58 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		3C11C7982C94C1B500CB54C9 /* BibliotecasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliotecasView.swift; sourceTree = "<group>"; };
 		3C11C79A2C94F5D100CB54C9 /* MateriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriaView.swift; sourceTree = "<group>"; };
+		3C4855342C9DF27D007DEC97 /* SecondMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMenuView.swift; sourceTree = "<group>"; };
 		3CB2146C2C8BAE9A002E1D27 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		3CB2146F2C8F8062002E1D27 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		3CB214712C90A339002E1D27 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				3CB214732C90A7DA002E1D27 /* Launch Screen.storyboard */,
 				3C11C7982C94C1B500CB54C9 /* BibliotecasView.swift */,
 				3C11C79A2C94F5D100CB54C9 /* MateriaView.swift */,
+				3C4855342C9DF27D007DEC97 /* SecondMenuView.swift */,
 			);
 			path = UcsgPro;
 			sourceTree = "<group>";
@@ -220,7 +223,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					3C0876052C8A0D1E00956C58 = {
 						CreatedOnToolsVersion = 15.4;
@@ -292,6 +295,7 @@
 				3C11C79B2C94F5D100CB54C9 /* MateriaView.swift in Sources */,
 				3C11C7992C94C1B500CB54C9 /* BibliotecasView.swift in Sources */,
 				3CB214702C8F8062002E1D27 /* InputView.swift in Sources */,
+				3C4855352C9DF27D007DEC97 /* SecondMenuView.swift in Sources */,
 				3C08760C2C8A0D1E00956C58 /* ContentView.swift in Sources */,
 				3C08760A2C8A0D1E00956C58 /* UcsgProApp.swift in Sources */,
 				3CB214722C90A33A002E1D27 /* SplashScreenView.swift in Sources */,
@@ -513,7 +517,6 @@
 		3C08762E2C8A0D2000956C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -533,7 +536,6 @@
 		3C08762F2C8A0D2000956C58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -553,7 +555,6 @@
 		3C0876312C8A0D2000956C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QBEX838GJ8;
@@ -571,7 +572,6 @@
 		3C0876322C8A0D2000956C58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QBEX838GJ8;

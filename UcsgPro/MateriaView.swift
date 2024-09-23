@@ -223,17 +223,11 @@ struct MateriaView: View {
                         }.padding(.top)
                             .padding(.leading)
                             .padding(.trailing)
-                    }
+                    }.padding(.bottom, 20)
                 }
             }.clipShape(UnevenRoundedRectangle(topLeadingRadius: 20, topTrailingRadius: 20))
         }.frame(alignment: .top)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading, content: {
-                    Image("logo_estudiantes")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 35.0)
-                })
                 ToolbarItem(placement: .navigationBarTrailing, content: {
                     Text("").font(.caption)
                 })

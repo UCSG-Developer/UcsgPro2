@@ -18,53 +18,27 @@ struct SecondView: View {
                         ThirdView()
                             .toolbar {
                                 ToolbarItem(placement: .navigationBarLeading, content: {
-                                    Image("logo_estudiantes")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(height: 35.0)
-                                })
-                                ToolbarItem(placement: .navigationBarTrailing, content: {
-                                    Menu(content: {
-                                        NavigationLink {
-                                            ThirdView()
-                                        } label: {
-                                            Label("Cambiar de Usuario", systemImage: "person")
-                                        }
-                                        Link(destination: URL(string: "http://webmail.cu.ucsg.edu.ec")!) {
-                                            Label("Correo Institucional", systemImage: "envelope")
-                                        }
-                                        Divider()
-                                        Button(action: {
-                                            
-                                        }, label: {
-                                            Label("Cerrar Sesión", systemImage: "rectangle.portrait.and.arrow.right")
-                                        })
-                                    }, label: {
-                                        Image(systemName: "ellipsis")
-                                    })
+                                    
                                 })
                             }
-                    }
+                    }.accentColor(.white)
                     .tabItem {
                         Image("barbutton_home")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(height: 15.0)
                     }
                     .toolbarBackground(Color("BackGround"), for: .tabBar)
-                    SplashScreenView()
+                    SecondMenuView()
                         .tabItem {
-                            Image("barbutton_chat")
+                            Image("new_ucsg_estudiante")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(height: 5.0)
                         }
-                    SplashScreenView()
+                    BibliotecasView()
                         .tabItem {
                             Image("barbutton_user")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(height: 5.0)
                         }
                 }
             }
