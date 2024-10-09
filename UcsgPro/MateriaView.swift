@@ -32,36 +32,38 @@ struct MateriaView: View {
                         VStack (alignment: .leading) {
                             HStack {
                                 VStack (alignment: .leading) {
-                                    Text(String("TEORÍA DE LA IMAGEN"))
+                                    Text(String("INGENIERÍA ECONÓMICA"))
                                         .font(.subheadline).bold()
                                         .foregroundColor(.white)
                                     HStack (alignment: .top, spacing: 0) {
                                         Text(String("Docente"))
-                                            .font(.caption2).bold()
-                                            .foregroundColor(Color("BackGround2"))
+                                            .font(.caption).bold()
+                                            .foregroundColor(.white)
                                             .padding(.top, 5)
                                             .padding(.bottom, 5)
                                             .padding(.leading, 10)
                                             .padding(.trailing, 10)
-                                    }.background(.white)
+                                    }.background(Color("BackGround2"))
                                         .cornerRadius(8)
-                                    Text(String("CESAR SALAZAR"))
+                                    Text(String("CESAR SALAZAR TOVAR"))
                                         .font(.footnote)
                                         .foregroundColor(.white)
+                                        .padding(.leading, 10)
                                     
                                     HStack (alignment: .top, spacing: 0) {
                                         Text(String("Paralelo"))
-                                            .font(.caption2).bold()
-                                            .foregroundColor(Color("BackGround2"))
+                                            .font(.caption).bold()
+                                            .foregroundColor(.white)
                                             .padding(.top, 5)
                                             .padding(.bottom, 5)
                                             .padding(.leading, 10)
                                             .padding(.trailing, 10)
-                                    }.background(.white)
+                                    }.background(Color("BackGround2"))
                                         .cornerRadius(8)
                                     Text(String("PARALELO A"))
                                         .font(.footnote)
                                         .foregroundColor(.white)
+                                        .padding(.leading, 10)
                                     
                                 }.padding(.top)
                                     .padding(.leading)
@@ -76,13 +78,13 @@ struct MateriaView: View {
                             VStack (alignment: .leading) {
                                 HStack (alignment: .top, spacing: 0) {
                                     Text(String("Horario"))
-                                        .font(.caption2).bold()
-                                        .foregroundColor(Color("BackGround2"))
+                                        .font(.caption).bold()
+                                        .foregroundColor(.white)
                                         .padding(.top, 5)
                                         .padding(.bottom, 5)
                                         .padding(.leading, 10)
                                         .padding(.trailing, 10)
-                                }.background(.white)
+                                }.background(Color("BackGround2"))
                                     .cornerRadius(8)
                                 HStack {
                                     Image(systemName: "calendar")
@@ -93,7 +95,7 @@ struct MateriaView: View {
                                     Text(String("Martes 10:00 - 12:30; Miercoles 14:30 - 15:00"))
                                         .font(.caption)
                                         .foregroundColor(.white)
-                                }
+                                }.padding(.leading, 10)
                             }
                             .padding(.leading)
                                 .padding(.bottom)

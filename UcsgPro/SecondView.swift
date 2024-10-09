@@ -16,30 +16,39 @@ struct SecondView: View {
                 TabView {
                     NavigationStack {
                         ThirdView()
-                            .toolbar {
-                                ToolbarItem(placement: .navigationBarLeading, content: {
-                                    
-                                })
-                            }
-                    }.accentColor(.white)
+                            .accentColor(.white)
+                    }
                     .tabItem {
                         Image("barbutton_home")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                    }
-                    .toolbarBackground(Color("BackGround"), for: .tabBar)
+                    }.toolbarBackground(Color("BackGround"), for: .tabBar)
+                    HorarioView()
+                        .tabItem {
+                            Image("horarios")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }.toolbarBackground(Color("BackGround"), for: .tabBar)
                     SecondMenuView()
                         .tabItem {
                             Image("new_ucsg_estudiante")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                        }
-                    BibliotecasView()
+                        }.toolbarBackground(Color("BackGround"), for: .tabBar)
+                    MapSiteView()
                         .tabItem {
-                            Image("barbutton_user")
+                            Image("mapa_sitio")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                        }
+                        }.toolbarBackground(Color("BackGround"), for: .tabBar)
+                    NavigationStack {
+                        UserProfileView()
+                    }
+                    .tabItem {
+                        Image("barbutton_user")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    }.toolbarBackground(Color("BackGround"), for: .tabBar)
                 }
             }
         }

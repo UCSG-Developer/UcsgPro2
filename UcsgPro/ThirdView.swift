@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import WebKit
 
 struct ThirdView: View {
     var body: some View {
@@ -25,7 +24,7 @@ struct ThirdView: View {
                                 Text("Eduardo Gomez").bold()
                                     .font(.title2)
                                     .padding(.top, 20)
-                                    .foregroundColor(Color.white)
+                                    .foregroundColor(Color.white)                                           
                                     .multilineTextAlignment(.leading)
                                 
                                 Text("COMPUTACIÓN (R)")
@@ -51,131 +50,47 @@ struct ThirdView: View {
                         .clipShape(UnevenRoundedRectangle(bottomLeadingRadius: 20, bottomTrailingRadius: 20))
                     ScrollView {
                         VStack (alignment: .leading) {
-                            
-                            ScrollView(.horizontal) {
-                                LazyHStack(spacing: 0) {
-                                    VStack (spacing: 0) {
-                                        HStack (alignment: .top, spacing: 0) {
-                                            VStack (alignment: .leading) {
-                                                Text(String("Siguiente Clase"))
-                                                    .font(.caption)
-                                                    .foregroundColor(.white)
-                                                    .padding(.top, 20)
-                                                    .padding(.leading, 20)
-                                                Text(String("TEORÍA DE LA IMAGEN"))
-                                                    .font(.body).bold()
-                                                    .foregroundColor(.white)
-                                                    .padding(.leading, 20)
-                                                HStack {
-                                                    Image(systemName: "deskclock")
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .frame(height: 10.0)
-                                                        .foregroundColor(.white)
-                                                    Text(String("10:00 - 12:30"))
-                                                        .font(.caption)
-                                                        .foregroundColor(.white)
-                                                    Text(String("[NO HA LLEGADO]"))
-                                                        .font(.caption).bold()
-                                                        .foregroundColor(Color.yellow)
-                                                        
-                                                }.padding(.leading, 20)
-                                                    .padding(.bottom, 20)
-                                            }
-                                            Spacer()
-                                        }.background(Color("BackGround2"))
-                                            .cornerRadius(16)
-                                            
-                                        Text(String("Mis clases de Hoy"))
-                                            .font(.footnote).bold()
-                                            .padding(.top, 10)
-                                        Spacer()
-                                    }.frame(height: 140)
-                                        .frame(alignment: .top)
-                                        .frame(width: .screenWidth - 40)
-                                        .background(Color("InputPanel"))
-                                        .clipShape(RoundedRectangle(cornerRadius: 16))
-                                        .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
-                                            effect
-                                                .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
-                                        }
+                            VStack (spacing: 0) {
+                                HStack (alignment: .top, spacing: 0) {
+                                    VStack (alignment: .leading) {
+                                        Text(String("Siguiente Clase"))
+                                            .font(.caption)
+                                            .foregroundColor(.white)
+                                            .padding(.top, 20)
+                                            .padding(.leading, 20)
+                                        Text(String("TEORÍA DE LA IMAGEN"))
+                                            .font(.body).bold()
+                                            .foregroundColor(.white)
+                                            .padding(.leading, 20)
+                                        HStack {
+                                            Image(systemName: "deskclock")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(height: 10.0)
+                                                .foregroundColor(.white)
+                                            Text(String("10:00 - 12:30"))
+                                                .font(.caption)
+                                                .foregroundColor(.white)
+                                            Text(String("[NO HA LLEGADO]"))
+                                                .font(.caption).bold()
+                                                .foregroundColor(Color.yellow)
+                                                
+                                        }.padding(.leading, 20)
+                                            .padding(.bottom, 20)
+                                    }
+                                    Spacer()
+                                }.background(Color("BackGround2"))
+                                    .cornerRadius(16)
                                     
-                                    VStack (alignment: .leading, spacing: 0) {
-                                        HStack (alignment: .top, spacing: 0) {
-                                            Text(String("Mis Deudas"))
-                                                .font(.callout).bold()
-                                                .padding(.top, 10)
-                                                .padding(.leading, 10)
-                                                .foregroundColor(Color("BackGround"))
-                                            Spacer()
-                                        }
-                                        HStack (alignment: .top, spacing: 0) {
-                                            VStack {
-                                                HStack {
-                                                    Image("deuda")
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .frame(height: 25.0)
-                                                    VStack (alignment: .leading) {
-                                                        Text(String("TALLER 4: POST"))
-                                                            .font(.caption).bold()
-                                                            .padding(.top, 5)
-                                                            .padding(.leading, 8)
-                                                        Text(String("Pagar hasta: 28-09-2024"))
-                                                            .font(.caption2).bold()
-                                                            .padding(.leading, 8)
-                                                        
-                                                    }
-                                                    Spacer()
-                                                    Text(String("$304.50"))
-                                                        .font(.caption).bold()
-                                                        .padding(.top, 5)
-                                                        .padding(.leading, 8)
-                                                }.padding(.top, 10)
-                                                    .padding(.leading, 10)
-                                                Divider()
-                                                HStack {
-                                                    Image("deuda")
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .frame(height: 25.0)
-                                                    VStack (alignment: .leading) {
-                                                        Text(String("Pensión Agosto"))
-                                                            .font(.caption).bold()
-                                                            .padding(.top, 5)
-                                                            .padding(.leading, 8)
-                                                        Text(String("Pagar hasta: 12-10-2024"))
-                                                            .font(.caption2).bold()
-                                                            .padding(.leading, 8)
-                                                        
-                                                    }
-                                                    Spacer()
-                                                    Text(String("$250.00"))
-                                                        .font(.caption).bold()
-                                                        .padding(.top, 5)
-                                                        .padding(.leading, 8)
-                                                }.padding(.top, 5)
-                                                    .padding(.leading, 10)
-                                            }
-                                            
-                                            Spacer()
-                                        }
-                                        Spacer()
-                                    }.frame(height: 140)
-                                        .frame(width: .screenWidth - 40, alignment: .top)
-                                        .frame(alignment: .top)
-                                        .background(Color("InputPanel"))
-                                        .clipShape(RoundedRectangle(cornerRadius: 16))
-                                        .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
-                                            effect
-                                                .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
-                                        }
-                                }
-                                .padding(.horizontal, 10)
-                                .padding(.top, 10)
-                                .scrollTargetLayout()
-                            }
-                            .scrollTargetBehavior(.viewAligned)
+                                Text(String("Mis clases de Hoy"))
+                                    .font(.footnote).bold()
+                                    .padding(.top, 10)
+                                Spacer()
+                            }.frame(height: 140)
+                                .frame(alignment: .top)
+                                .background(Color("InputPanel"))
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .padding(10)
                             
                             Text("MIS MATERIAS")
                                 .font(.body).bold()
@@ -187,9 +102,9 @@ struct ThirdView: View {
                                     NavigationLink(destination: MateriaView()) {
                                         VStack (alignment: .leading, spacing: 0) {
                                             HStack (alignment: .top, spacing: 0) {
-                                                Text("Teoría de la Imagen")
+                                                Text("Ingeniería económica")
                                                     .font(.body).bold()
-                                                    .padding(.top, 10)
+                                                    .padding(.top, 30)
                                                     .padding(.leading, 10)
                                                     .foregroundColor(Color("BackGround2"))
                                             }
@@ -230,17 +145,32 @@ struct ThirdView: View {
                                                     .padding(.top, 10)
                                                     .padding(.leading, 10)
                                                     .foregroundColor(.black)
-                                                Text("CÉSAR SALAZAR")
+                                                Text("CÉSAR SALAZAR TOVAR")
                                                     .font(.caption)
                                                     .foregroundColor(.black)
                                                     .padding(.top, 10)
                                                     .padding(.leading, 5)
+                                                    .padding(.trailing, 5)
+                                            }
+                                            
+                                            HStack {
+                                                Text("Asistencia: 50%")
+                                                    .font(.caption).foregroundColor(.black)
+                                                    .padding(.top, 10)
+                                                    .padding(.leading, 10)
+                                                    .padding(.bottom, 10)
+                                                    .padding(.trailing, 5)
+                                                Image(systemName: "exclamationmark.triangle.fill")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(height: 15.0)
+                                                    .foregroundColor(.orange)
                                             }
                                             
                                             Spacer()
                                             
                                         }.frame(height: 250)
-                                            .frame(width: .screenWidth - 200, alignment: .top)
+                                            .frame(width: .screenWidth - 180, alignment: .top)
                                             .frame(alignment: .top)
                                             .background(Color("InputPanel"))
                                             .clipShape(RoundedRectangle(cornerRadius: 16))
@@ -254,12 +184,12 @@ struct ThirdView: View {
                                         HStack (alignment: .top, spacing: 0) {
                                             Text("Finanzas (R)")
                                                 .font(.body).bold()
-                                                .padding(.top, 10)
+                                                .padding(.top, 30)
                                                 .padding(.leading, 10)
                                                 .foregroundColor(Color("BackGround2"))
                                         }
                                         HStack (alignment: .top, spacing: 0) {
-                                            Text("Cód.: 544")
+                                            Text("Cód.: 108")
                                                 .font(.caption)
                                                 .padding(.leading, 10)
                                                 .padding(.bottom, 10)
@@ -296,12 +226,24 @@ struct ThirdView: View {
                                                 .font(.caption)
                                                 .padding(.top, 10)
                                                 .padding(.leading, 5)
+                                                .padding(.trailing, 5)
                                         }
-                                        
+                                        HStack {
+                                            Text("Asistencia: 89%")
+                                                .font(.caption)
+                                                .padding(.top, 10)
+                                                .padding(.leading, 10)
+                                                .padding(.bottom, 10)
+                                                .padding(.trailing, 5)
+                                            Image(systemName: "checkmark.circle.fill")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(height: 15.0)
+                                                .foregroundColor(.green)
+                                        }
                                         Spacer()
-                                        
                                     }.frame(height: 250)
-                                        .frame(width: .screenWidth - 200, alignment: .top)
+                                        .frame(width: .screenWidth - 180, alignment: .top)
                                         .frame(alignment: .top)
                                         .background(Color("InputPanel"))
                                         .clipShape(RoundedRectangle(cornerRadius: 16))
@@ -311,12 +253,76 @@ struct ThirdView: View {
                                         }
                                     
                                 }
-                                .padding(.horizontal, 10)
-                                .padding(.top, 10)
+                                .padding(.top, 5)
+                                .padding(.leading, 10)
+                                .padding(.trailing, 10)
                                 .scrollTargetLayout()
                                 
                             }
                             .scrollTargetBehavior(.viewAligned)
+                            
+                            Text("MIS DEUDAS")
+                                .font(.body).bold()
+                                .padding(.top, 20)
+                                .padding(.leading, 20)
+                            
+                            VStack (alignment: .leading, spacing: 0) {
+                                HStack (alignment: .top, spacing: 0) {
+                                    VStack {
+                                        HStack {
+                                            Image("deuda")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(height: 25.0)
+                                            VStack (alignment: .leading) {
+                                                Text(String("TALLER 4: POST"))
+                                                    .font(.caption).bold()
+                                                    .padding(.top, 5)
+                                                    .padding(.leading, 8)
+                                                Text(String("Pagar hasta: 28-09-2024"))
+                                                    .font(.caption2).bold()
+                                                    .padding(.leading, 8)
+                                                
+                                            }
+                                            Spacer()
+                                            Text(String("$304.50"))
+                                                .font(.caption).bold()
+                                                .padding(.top, 5)
+                                                .padding(.leading, 8)
+                                        }.padding(.top, 10)
+                                            .padding(.leading, 10)
+                                        Divider()
+                                        HStack {
+                                            Image("deuda")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(height: 25.0)
+                                            VStack (alignment: .leading) {
+                                                Text(String("Pensión Agosto"))
+                                                    .font(.caption).bold()
+                                                    .padding(.top, 5)
+                                                    .padding(.leading, 8)
+                                                Text(String("Pagar hasta: 12-10-2024"))
+                                                    .font(.caption2).bold()
+                                                    .padding(.leading, 8)
+                                                
+                                            }
+                                            Spacer()
+                                            Text(String("$250.00"))
+                                                .font(.caption).bold()
+                                                .padding(.top, 5)
+                                                .padding(.leading, 8)
+                                        }.padding(.top, 5)
+                                            .padding(10)
+                                    }
+                                    Spacer()
+                                }
+                                Spacer()
+                            }.frame(height: 140)
+                                .frame(alignment: .top)
+                                .background(Color("InputPanel"))
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .padding(10)
                             
                             Text("MIS ACCESOS")
                                 .font(.body).bold()
@@ -369,14 +375,14 @@ struct ThirdView: View {
                                                     .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
                                             }
                                     }
-                                    NavigationLink(destination: ContentView()) {
+                                    NavigationLink(destination: BibliotecasView()) {
                                         VStack (alignment: .center, spacing: 0) {
-                                            Image(systemName: "calendar")
+                                            Image(systemName: "questionmark.circle.dashed")
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
                                                 .frame(height: 30)
                                                 .foregroundColor(.white)
-                                            Text("Horario")
+                                            Text("Preguntas Frecuentes")
                                                 .font(.caption2).bold()
                                                 .foregroundColor(.white)
                                                 .multilineTextAlignment(.center)
@@ -414,12 +420,12 @@ struct ThirdView: View {
                                             }
                                     }
                                     VStack (alignment: .center, spacing: 0) {
-                                        Image(systemName: "desktopcomputer.and.arrow.down")
+                                        Image(systemName: "checkmark.rectangle.stack")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
                                             .frame(height: 30)
                                             .foregroundColor(.white)
-                                        Text("Tutorias/Otros")
+                                        Text("Evaluación a docentes")
                                             .font(.caption2).bold()
                                             .foregroundColor(.white)
                                             .multilineTextAlignment(.center)
@@ -438,25 +444,24 @@ struct ThirdView: View {
                                         }
 
                                 }
-                                .padding(.horizontal, 10)
                                 .padding(.top, 10)
                                 .scrollTargetLayout()
-                            }
-                            .scrollTargetBehavior(.viewAligned)
+                            }.scrollTargetBehavior(.viewAligned)
+                                .padding(.leading, 10)
                             
                             Text("NOTICIAS / EVENTOS")
                                 .font(.body).bold()
-                                .padding(.top, 10)
+                                .padding(.top, 20)
                                 .padding(.leading, 20)
                             
                             ScrollView(.horizontal) {
                                 LazyHStack(spacing: 0) {
                                     VStack (spacing: 0) {
-                                        Image("gastos-deducibles")
+                                        Image("encuesta-web")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
-                                            .frame(height: 170)
-                                    }.frame(height: 180)
+                                            .frame(height: 225)
+                                    }.frame(height: 225)
                                         .frame(alignment: .top)
                                         .frame(width: .screenWidth - 40)
                                         
@@ -470,8 +475,8 @@ struct ThirdView: View {
                                         Image("beneficios-tarjeta")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
-                                            .frame(height: 170)
-                                    }.frame(height: 180)
+                                            .frame(height: 225)
+                                    }.frame(height: 225)
                                         .frame(alignment: .top)
                                         .frame(width: .screenWidth - 40)
                                         
@@ -482,11 +487,11 @@ struct ThirdView: View {
                                         }
                                     
                                 }
-                                .padding(.horizontal, 10)
-                                .padding(.top, 10)
+                                .padding(.top, 5)
                                 .scrollTargetLayout()
                             }
                             .scrollTargetBehavior(.viewAligned)
+                            .padding(.leading, 10)
                             .padding(.bottom, 20)
                             
                         }.frame(maxHeight: .infinity, alignment: .top)
@@ -508,47 +513,4 @@ extension CGFloat {
 
 #Preview {
     ThirdView()
-}
-
-struct WebView: UIViewRepresentable {
-    
-    let webView: WKWebView
-    
-    init() {
-        webView = WKWebView(frame: .zero)
-        
-        webView.configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
-        webView.configuration.defaultWebpagePreferences.allowsContentJavaScript = true
-    }
-    
-    func makeUIView(context: Context) -> WKWebView {
-        return webView
-    }
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        let urlNoticias = "https://www46.ucsg.edu.ec"
-        webView.load(URLRequest(url: URL(string: urlNoticias)!))
-    }
-    
-    func webView(webView: WKWebView!, createWebViewWithConfiguration configuration: WKWebViewConfiguration!, forNavigationAction navigationAction: WKNavigationAction!, windowFeatures: WKWindowFeatures!) -> WKWebView! {
-        if navigationAction.targetFrame == nil {
-            webView.load(navigationAction.request)
-        }
-        return nil
-    }
-    
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, preferences: WKWebpagePreferences, decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void) {
-        if navigationAction.shouldPerformDownload {
-            decisionHandler(.download, preferences)
-        } else {
-            decisionHandler(.allow, preferences)
-        }
-    }
-
-    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-        if navigationResponse.canShowMIMEType {
-            decisionHandler(.allow)
-        } else {
-            decisionHandler(.download)
-        }
-    }
 }

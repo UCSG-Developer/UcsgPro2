@@ -14,121 +14,98 @@ struct SecondMenuView: View {
             ZStack(alignment: .topLeading) {
                 Color("BackgroundApp")
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("MI PERFIL ACTUAL")
-                        .font(.headline).bold()
-                    Image("logo_estudiantes")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 40)
-                        .padding(.top, 10)
-                    Text("MIS ACCESOS EXTERNOS")
+                    Text("ACCESO A MIS PLATAFORMAS")
                         .font(.headline).bold()
                         .padding(.top, 30)
+                    
                     ScrollView {
-                        VStack(alignment: .leading, spacing: 10) {
-                            Link(destination: URL(string: "https://www34.ucsg.edu.ec")!) {
-                                HStack (alignment: .center, spacing: 0) {
-                                    Image(systemName: "play.desktopcomputer")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(height: 40)
-                                        .foregroundColor(.white)
-                                        .padding(.leading, 20)
-                                    Text("Tutoría / Otros")
-                                        .font(.caption2).bold()
-                                        .foregroundColor(.white)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.leading, 10)
-                                    Spacer()
-                                }.frame(height: 60)
-                                    .frame(width: 250, alignment: .top)
-                                    .frame(alignment: .top)
-                                    .background(Color("BackGround2"))
-                                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                                    .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
-                                        effect
-                                            .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
-                                    }
-                            }
-                            
-                            Link(destination: URL(string: "https://www34.ucsg.edu.ec")!) {
-                                HStack (alignment: .center, spacing: 0) {
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Link(destination: URL(string: "https://www34.ucsg.edu.ec")!) {
+                                    VStack (alignment: .center, spacing: 0) {
+                                        Image(systemName: "play.desktopcomputer")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(height: 30)
+                                            .foregroundColor(Color("BackGround2"))
+                                        Text("Tutorías / Otros")
+                                            .font(.footnote).bold()
+                                            .padding(.top, 5)
+                                            .foregroundColor(.black)
+                                            .multilineTextAlignment(.center)
+                                        
+                                    }.frame(height: 130)
+                                        .frame(width: 140, alignment: .top)
+                                        .frame(alignment: .top)
+                                        .background(Color("InputPanel"))
+                                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                                }
+                                Spacer()
+                                VStack (alignment: .center, spacing: 0) {
                                     Image(systemName: "character.book.closed")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(height: 40)
-                                        .foregroundColor(.white)
-                                        .padding(.leading, 20)
+                                        .frame(height: 30)
+                                        .foregroundColor(Color("BackGround2"))
                                     Text("Salas de Lectura")
-                                        .font(.caption2).bold()
-                                        .foregroundColor(.white)
+                                        .font(.footnote).bold()
+                                        .padding(.top, 5)
+                                        .foregroundColor(.black)
                                         .multilineTextAlignment(.center)
-                                        .padding()
-                                    Spacer()
                                     
-                                }.frame(height: 60)
-                                    .frame(width: 250, alignment: .top)
+                                }.frame(height: 130)
+                                    .frame(width: 140, alignment: .top)
                                     .frame(alignment: .top)
-                                    .background(Color("BackGround2"))
+                                    .background(Color("InputPanel"))
                                     .clipShape(RoundedRectangle(cornerRadius: 16))
-                                    .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
-                                        effect
-                                            .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
-                                    }
+                                Spacer()
                             }
-                            
-                            Link(destination: URL(string: "https://www34.ucsg.edu.ec")!) {
-                                HStack (alignment: .center, spacing: 0) {
+                            HStack {
+                                Spacer()
+                                VStack (alignment: .center, spacing: 0) {
                                     Image(systemName: "ipad.gen2")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(height: 40)
-                                        .foregroundColor(.white)
-                                        .padding(.leading, 25)
+                                        .frame(height: 30)
+                                        .foregroundColor(Color("BackGround2"))
                                     Text("eBooks")
-                                        .font(.caption2).bold()
-                                        .foregroundColor(.white)
+                                        .font(.footnote).bold()
+                                        .padding(.top, 5)
+                                        .foregroundColor(.black)
                                         .multilineTextAlignment(.center)
-                                        .padding()
-                                    Spacer()
                                     
-                                }.frame(height: 60)
-                                    .frame(width: 250, alignment: .top)
+                                }.frame(height: 130)
+                                    .frame(width: 140, alignment: .top)
                                     .frame(alignment: .top)
-                                    .background(Color("BackGround2"))
+                                    .background(Color("InputPanel"))
                                     .clipShape(RoundedRectangle(cornerRadius: 16))
-                                    .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
-                                        effect
-                                            .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
-                                    }
-                            }
-                            
-                            Link(destination: URL(string: "https://www34.ucsg.edu.ec")!) {
-                                HStack (alignment: .center, spacing: 0) {
-                                    Image(systemName: "text.document")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(height: 40)
-                                        .foregroundColor(.white)
-                                        .padding(.leading, 25)
-                                    Text("Facturación electrónica")
-                                        .font(.caption2).bold()
-                                        .foregroundColor(.white)
-                                        .multilineTextAlignment(.center)
-                                        .padding()
-                                    Spacer()
-                                }.frame(height: 60)
-                                    .frame(width: 250, alignment: .top)
-                                    .frame(alignment: .top)
-                                    .background(Color("BackGround2"))
-                                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                                    .scrollTransition(.interactive, axis: .horizontal) { effect, phase in
-                                        effect
-                                            .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
-                                    }
-                            }
-                        }
-                    }.padding(.top, 20)
+                                Spacer()
+                                Link(destination: URL(string: "https://www34.ucsg.edu.ec")!) {
+                                    VStack (alignment: .center, spacing: 0) {
+                                        Image(systemName: "text.document")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(height: 30)
+                                            .foregroundColor(Color("BackGround2"))
+                                        Text("Facturación electrónica")
+                                            .font(.footnote).bold()
+                                            .padding(.top, 5)
+                                            .foregroundColor(.black)
+                                            .multilineTextAlignment(.center)
+                                        
+                                    }.frame(height: 130)
+                                        .frame(width: 140, alignment: .top)
+                                        .frame(alignment: .top)
+                                        .background(Color("InputPanel"))
+                                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                                }
+                                Spacer()
+                            }.padding(.top)
+                        }.padding(.top)
+                            .padding(.leading)
+                            .padding(.trailing)
+                    }.padding(.bottom, 20)
                 }
                     .padding()
                     

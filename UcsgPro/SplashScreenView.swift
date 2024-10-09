@@ -12,14 +12,10 @@ struct SplashScreenView: View {
         ZStack {
             Color("BackGround").ignoresSafeArea()
             VStack {
-                Image("icono_ucsg_white")
-                    .resizable()
-                    .frame(width: 100, height: 100)
                 Text("Bienvenido Eduardo Gómez..!!")
                     .foregroundColor(.white)
                     .font(.system(size: 24))
                     .bold()
-                    .padding(.top, 40)
             }
         }
     }

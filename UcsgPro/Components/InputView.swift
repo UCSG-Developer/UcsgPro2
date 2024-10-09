@@ -25,23 +25,23 @@ struct InputView: View {
                         .foregroundColor(Color(.lightGray))
                     
                     ZStack(alignment: .trailing) {
-                                Group {
-                                    if isSecured {
-                                        SecureField(placeHolder, text: $texto)
-                                            .font(.system(size: 14))
-                                    } else {
-                                        TextField(placeHolder, text: $texto)
-                                            .font(.system(size: 14))
-                                    }
-                                }.padding(.trailing, 32)
-
-                                Button(action: {
-                                    isSecured.toggle()
-                                }) {
-                                    Image(systemName: self.isSecured ? "eye.slash" : "eye")
-                                        .accentColor(.gray)
-                                }
+                        Group {
+                            if isSecured {
+                                SecureField(placeHolder, text: $texto)
+                                    .font(.system(size: 14))
+                            } else {
+                                TextField(placeHolder, text: $texto)
+                                    .font(.system(size: 14))
                             }
+                        }.padding(.trailing, 32)
+
+                        Button(action: {
+                            isSecured.toggle()
+                        }) {
+                            Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                                .accentColor(.gray)
+                        }
+                    }
                 } else {
                     Image(systemName: "person.fill")
                         .foregroundColor(Color(.lightGray))
@@ -49,7 +49,6 @@ struct InputView: View {
                         .font(.system(size: 14))
                 }
             }
-            
             Divider()
         }
     }
